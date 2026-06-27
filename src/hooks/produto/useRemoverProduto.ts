@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { queryClient } from "../../main";
+import { queryClient } from "../../queryClient";
 import useAPI from "../useAPI";
 import type { Produto } from "../../interfaces/Produto";
 
