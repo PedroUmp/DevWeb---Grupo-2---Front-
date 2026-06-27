@@ -8,7 +8,7 @@ import { queryClient } from "../queryClient";
 
 describe("ProdutosPage", () => {
   it("remove um produto de forma otimista", async () => {
-    const user = userEvent.setup();
+    const user = userEvent.setup(); //esse setup ativa o MSW que intercepta a chamada à API
 
     render(
       <QueryClientProvider client={queryClient}>

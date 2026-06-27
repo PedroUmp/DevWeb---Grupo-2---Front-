@@ -22,7 +22,7 @@ describe("LoginPage", () => {
       </QueryClientProvider>,
     );
 
-    await user.type(screen.getByPlaceholderText(/informe seu email/i), "teste@id.uff.com.br");
+    await user.type(screen.getByPlaceholderText(/informe seu email/i), "testeadm@id.uff.com.br");
     await user.type(screen.getByPlaceholderText(/informe sua senha/i), "123456");
     await user.click(screen.getByRole("button", { name: /entrar/i }));
 
@@ -30,6 +30,6 @@ describe("LoginPage", () => {
       expect(screen.getByRole("heading", { name: /home/i })).toBeInTheDocument();
     });
 
-    expect(useTokenStore.getState().tokenResponse.token).toBe("token-msw-123");
+    expect(useTokenStore.getState().tokenResponse.token).toBe("token-teste");
   });
 });

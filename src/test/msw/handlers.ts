@@ -22,9 +22,9 @@ const produtosSeed: ProdutoMock[] = [
     imagem: "/banana.png",
     categoria: { id: 1, nome: "Frutas" },
     nome: "Banana verde",
-    descricao: "Banana madura para consumo diário.",
+    descricao: "Banana gostosa.",
     disponivel: true,
-    dataCadastro: "2026-06-10T00:00:00.000Z",
+    dataCadastro: "2026-06-10",
     qtdEstoque: 15,
     preco: 8.9,
   },
@@ -110,9 +110,9 @@ export const handlers = [
   http.post(`${URL_BASE}${URL_AUTENTICACAO}/login`, async ({ request }) => {
     const body = (await request.json()) as { email?: string; senha?: string };
 
-    if (body.email === "teste@id.uff.com.br" && body.senha === "123456") {
+    if (body.email === "testeadm@id.uff.com.br" && body.senha === "123456") {
       return HttpResponse.json({
-        token: "token-msw-123",
+        token: "token-teste",
         idUsuario: 7,
         nome: "Administrador",
         role: "ADMIN",
