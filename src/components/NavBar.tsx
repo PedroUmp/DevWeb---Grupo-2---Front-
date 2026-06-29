@@ -72,8 +72,8 @@ const NavBar = () => {
               <i className="bi bi-database-add me-1"></i>
               Cad. Produto
             </NavLink>
-            <NavLink className="text-gray-700 hover:text-black" to="/login">
-              {tokenResponse.idUsuario > 0 ? 
+            <NavLink data-testid="nav-auth" className="text-gray-700 hover:text-black" to="/login">
+              {tokenResponse.idUsuario > 0 ?
                 <>
                   <i className="bi bi-box-arrow-left me-1"></i>
                   Sair

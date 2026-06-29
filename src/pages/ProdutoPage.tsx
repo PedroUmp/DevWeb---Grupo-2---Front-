@@ -53,7 +53,7 @@ const ProdutoPage = () => {
       <hr className="mb-4" />
 
       {mensagem && (
-        <div className="mb-3 rounded border-2 border-green-600 bg-green-100 px-4 py-3 font-bold text-green-800">
+        <div data-testid="produto-mensagem" className="mb-3 rounded border-2 border-green-600 bg-green-100 px-4 py-3 font-bold text-green-800">
           {mensagem}
         </div>
       )}
@@ -140,6 +140,7 @@ const ProdutoPage = () => {
           <button
             onClick={() => tratarRemocao(produto.id!)}
             disabled={removido}
+            data-testid="produto-remover"
             className="btn-danger w-full py-1"
             type="button"
           >
